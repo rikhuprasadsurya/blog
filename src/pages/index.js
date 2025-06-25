@@ -1,8 +1,7 @@
+import posts from '@/data/posts.json';
 import Link from 'next/link';
 
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:3001/api/posts');
-    const posts = await res.json();
     return { props: { posts } };
 }
 
